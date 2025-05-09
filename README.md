@@ -27,9 +27,8 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 
 
-## Understanding Type Safety: `any`, `unknown`, and `never`
+### `any`, `unknown`, and `never`
 
-TypeScript provides three special types that serve different purposes in type safety. Understanding their differences is crucial for writing type-safe code.
 
 ### 1. `any` Type
 
@@ -54,16 +53,15 @@ value.foo.bar; // OK (but might crash at runtime)
 
 ```typescript
 let value: unknown = 4;
-value = "hello"; // OK
-value = true; // OK
+value = "hello"; 
+value = true; 
 
-// These would cause errors:
-value.foo.bar; // Error: Object is of type 'unknown'
-value.toUpperCase(); // Error: Object is of type 'unknown'
+value.foo.bar; 
+value.toUpperCase(); 
 
-// Type checking required:
+
 if (typeof value === "string") {
-  value.toUpperCase(); // OK
+  value.toUpperCase(); 
 }
 ```
 
@@ -88,7 +86,7 @@ function infiniteLoop(): never {
   }
 }
 
-// Exhaustive type checking
+//  type checking
 type Shape = "circle" | "square" | "triangle";
 
 function getArea(shape: Shape): number {
