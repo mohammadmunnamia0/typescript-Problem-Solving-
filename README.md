@@ -27,6 +27,9 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 
 
+
+```
+
 ### `any`, `unknown`, and `never`
 
 
@@ -39,7 +42,6 @@ let value: any = 4;
 value = "hello"; // OK
 value = true; // OK
 value.foo.bar; // OK (but might crash at runtime)
-```
 
 **When to use `any`**:
 
